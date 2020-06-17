@@ -1,0 +1,26 @@
+package com.company;
+import java.util.Scanner;
+
+
+
+public class Challengedatatype {
+    public static void main(String[] args) {
+        Scanner Console = new Scanner(System.in);
+
+        int i = 4;
+        double d = 4.0;
+        String s = "Greenhill";
+
+        System.out.println("Input integer: ");
+        int integer1 = Console.nextInt();
+        System.out.println("Input double: ");
+        double double1 = Console.nextDouble();
+        System.out.println("Input string: ");
+        String string1 = Console.nextLine();
+
+        System.out.println(i+integer1);
+        System.out.println(d+double1);
+        System.out.println(s+string1);
+
+    }
+}
