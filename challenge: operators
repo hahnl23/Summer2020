@@ -34,6 +34,7 @@ public class operatorschallenge {
         tax = (int) (mealCost * 8/100);
 
         totalCost = mealCost + tip + tax;
+        Math.round(totalCost);
 
 
         System.out.println("Your total cost is: " + totalCost);
