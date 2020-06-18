@@ -1,0 +1,26 @@
+package com.company;
+
+public class Challenge33 {
+    public static final int Size = 5;
+    public static void main(String[] args) {
+
+        char letter = 65;
+
+        for (int top = Size; top >= 0 ; top--) {
+            for (int i = 0; i <= top; i++) {
+                System.out.print((char) (letter + i) + " ");
+
+            }
+            System.out.println(" ");
+        }
+        for (int top = 0; top <= Size; top++) {
+            for (int i = 0; i <= top; i++) {
+                System.out.print((char) (letter + i) + " ");
+
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
+
