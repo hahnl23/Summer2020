@@ -1,0 +1,74 @@
+package com.company;
+
+public class Challenge3 {
+    public static final int Size =4;
+
+    public static void main(String[] args) {
+        Line();
+        Top();
+        Bottom();
+        Line();
+        Bottom();
+        Top();
+        Line();
+    }
+
+    public static void Line() {
+        System.out.print("+");
+
+        for (int dash = 0; dash < Size * 2; dash++) {
+            System.out.print("-");
+        }
+        System.out.println("+");
+    }
+
+    public static void Top() {
+        for (int line = 1; line <= Size; line++) {
+            System.out.print("|");
+
+            for (int spaces = 1; spaces <= -1 * line + Size + 1; spaces++) {
+                System.out.print(" ");
+            }
+
+            for (int fslash = 1; fslash <= line - 1; fslash++) {
+                System.out.print("/");
+            }
+            System.out.print("*");
+
+            for (int slash = 1; slash <= line - 1; slash++) {
+                System.out.print("\\");
+            }
+            for (int spaces = 0; spaces < -1 * line + Size + 1; spaces++) {
+                System.out.print(" ");
+            }
+
+            System.out.println("|");
+
+        }
+    }
+
+    public static void Bottom() {
+            for (int line = 1; line <= Size; line++) {
+                System.out.print("|");
+
+                for (int spaces = 0; spaces < line; spaces++) {
+                    System.out.print(" ");
+                }
+
+                for (int fslash = 0; fslash < Size - line; fslash++) {
+
+                    System.out.print("/");
+                }
+                System.out.print("*");
+
+                    for (int slash = 0; slash < Size - line; slash++) {
+                        System.out.print("\\");
+                }
+                for (int spaces = 0; spaces < line; spaces++) {
+                    System.out.print(" ");
+                }
+                System.out.println("|");
+            }
+        }
+
+    }
