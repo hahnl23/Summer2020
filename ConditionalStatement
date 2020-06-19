@@ -1,0 +1,51 @@
+//pseudocode:
+//create a scanner and a random with inport java.util
+//create main string
+//declare scanner
+//declare random (r2)
+//declare integer r that is bound by 1
+//decalre integer n that is bound by 137
+//declare string a2 that corresponds with yes for when a statement is inputed
+//use the solve method for the random, the two integers, and the string
+//create another static void using solve method for the random, the two integers, and the string
+//Use a scanner to say "do you want to continue"
+//if answer if no for a2, terminate
+//if answer is yes, provide random number.
+//determine if number is weird or not weird using if else if statements
+//if (n % 2 == 1) then System.out.println("Weird")
+//else if (n % 2 == 0 && n >= 2 && n <= 5) then System.out.println("Not Weird")
+//else if (n % 2 == 0 && n >= 6 && n <= 20) then System.out.println("Weird");
+//else if (n % 2 == 0 && n > 20) then System.out.println("Not Weird")
+
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+public class ConditionalStatement {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random r2 = new Random();
+        int r = r2.nextInt(1);
+        int n = r2.nextInt(138);
+        String a2 = ("yes");
+        solve(r2, r, n, a2);
+    }
+
+    static void solve(Random r2, int r, int n, String a2) {
+        a2 = "no";
+        System.out.println("Do you want to continue?");
+        Scanner input = new Scanner(System.in);
+        a2 = input.nextLine();
+//            while(a2 == "yes"){
+        System.out.println("The random number is: " + n);
+        if (n % 2 == 1) {
+            System.out.println("Weird");
+
+        } else if (n % 2 == 0 && n >= 2 && n <= 5) {
+            System.out.println("Not Weird");
+        } else if (n % 2 == 0 && n >= 6 && n <= 20) {
+            System.out.println("Weird");
+        } else if (n % 2 == 0 && n > 20) {
+            System.out.println("Not Weird");
+        }
+    }
+}
