@@ -1,13 +1,15 @@
-//Lian Hahn's Psuedocode:
-//Declare scanner
-//Input the cost of the meal before tax and tip (mealCost) with system.print and scanner
-//Input the percentage of cost of meal being added as tip (tipPercent) with system.print and scanner
-//Input the percentage of cost of meal being added as tax (taxpercent) with system.print and scanner
-//Declare variables for tip, tax, and totalCost
-//Make equations for tip and tax
-//Make equation for totalCost
-//Print totalCost
-
+/*
+Lian Hahn's Psuedocode:
+Declare scanner
+Input the cost of the meal before tax and tip (mealCost) with system.print and scanner
+Input the percentage of cost of meal being added as tip (tipPercent) with system.print and scanner
+Input the percentage of cost of meal being added as tax (taxpercent) with system.print and scanner
+Declare variables for tip, tax, and totalCost
+Make equations for tip and tax
+Make equation for totalCost
+Print totalCost
+ */
+ 
 package com.company;
 import java.util.Scanner;
 public class operatorschallenge {
