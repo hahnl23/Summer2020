@@ -1,3 +1,18 @@
+//Lian Hahn's psuedocode:
+//declare a 'char' that equals 65
+//make a for loop for the integer top 
+//top will equal 5, be greater or equal to zero, and be decreasing every step (--)
+//make a for loop inside of the previous for loop for the integer i
+//i equals 0, is less than or equal to top, and is increasing every step (++)
+//System print the char variable plus i and a space with both of the loops
+//close the second loop and put a space
+//close the first loop
+//repeat the two for loops again, but for the top loop, top equals 0, and is less than or equal to five
+//make sure the progarm works run it a few times
+//input a Size = 5
+//change the 5's in the program to Size
+//run again with Size
+
 package com.company;
 
 public class Challenge33 {
