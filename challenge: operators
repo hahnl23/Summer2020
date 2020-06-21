@@ -1,15 +1,16 @@
 /*
 Lian Hahn's Psuedocode:
-Declare scanner
+Import scanner
 Input the cost of the meal before tax and tip (mealCost) with system.print and scanner
 Input the percentage of cost of meal being added as tip (tipPercent) with system.print and scanner
 Input the percentage of cost of meal being added as tax (taxpercent) with system.print and scanner
-Declare variables for tip, tax, and totalCost
-Make equations for tip and tax
-Make equation for totalCost
+Declare variables for doubles tip, tax, and totalCost
+Make equation for tip (tip = mealCost * 20/100)
+Make equation for tax (tax = mealCost * 8/100)
+Make equation for totalCost (mealCost + tip + tax)
+Round the totalCost 
 Print totalCost
- */
- 
+*/
 package com.company;
 import java.util.Scanner;
 public class operatorschallenge {
@@ -28,12 +29,12 @@ public class operatorschallenge {
         System.out.println("The percentage of the cost of the meal being added as tax: ");
         int taxPercent = Console.nextInt();
 
-        int tip;
-        int tax;
+     double tip;
+      double tax;
         double totalCost;
 
-        tip = (int) (mealCost * 20/100);
-        tax = (int) (mealCost * 8/100);
+        tip = (mealCost * 20/100);
+        tax = (mealCost * 8/100);
 
         totalCost = mealCost + tip + tax;
         Math.round(totalCost);
