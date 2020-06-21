@@ -1,41 +1,39 @@
-/*
-Lian Hahn's psuedocode:
-declare a 'char' that equals 65
-make a for loop for the integer top 
-top will equal 5, be greater or equal to zero, and be decreasing every step (--)
-make a for loop inside of the previous for loop for the integer i
-i equals 0, is less than or equal to top, and is increasing every step (++)
-System print the char variable plus i and a space with both of the loops
-close the second loop and put a space
-close the first loop
-repeat the two for loops again, but for the top loop, top equals 0, and is less than or equal to five
-make sure the progarm works run it a few times
-input a Size = 5
-change the 5's in the program to Size
-run again with Size
-*/
+//Lian Hahn's psuedocode:
+//declare a 'char' that equals 65
+//make a for loop for the integer top
+//top will equal 5, be greater or equal to zero, and be decreasing every step (--)
+//make a for loop inside of the previous for loop for the integer i
+//i equals 0, is less than or equal to top, and is increasing every step (++)
+//System print the char variable plus i and a space with both of the loops
+//close the second loop and put a space
+//close the first loop
+//repeat the two for loops again, but for the top loop, top equals 0, and is less than or equal to five
+//make sure the progarm works run it a few times
+//input a Size = 5
+//change the 5's in the program to Size
+//run again with Size
 
 package com.company;
 
 public class Challenge33 {
-    public static final int Size = 5;
+    public static final int Size = 5; //represents how far into the alphabet the program will go
     public static void main(String[] args) {
 
-        char letter = 65;
+        char letter = 65; //for the first 6 letters of the alphabet, if any different, the program would not start at A
 
         for (int top = Size; top >= 0 ; top--) {
             for (int i = 0; i <= top; i++) {
-                System.out.print((char) (letter + i) + " ");
+                System.out.print((char)(letter + i) + " ");//add char in this print so it will print out letters instead of numbers
 
             }
-            System.out.println(" ");
+            System.out.println(" "); // so the program will have many lines and not just be one line
         }
-        for (int top = 0; top <= Size; top++) {
+        for (int top = 0; top <= Size; top++) { //made top equal zero because the characters increase the further you go down and and less than or equal to Size so it will display many letters.
             for (int i = 0; i <= top; i++) {
-                System.out.print((char) (letter + i) + " ");
+                System.out.print((char) (letter + i) + " ");//add char so it will print out letters and not just the corresponding numbers
 
             }
-            System.out.println(" ");
+            System.out.println(" "); //so the program will have many lines
         }
     }
 }
