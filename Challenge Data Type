@@ -1,41 +1,43 @@
 /*
-Lian Hahn's pseudocode
-Declare variables
+Lian Hahn's pseudocode;
+Declare variables (int, double and string)
 int i = 4;
 double d = 4.0;
 String s = "Greenhill ";
-Declare scanner
-Declare new integer with scanner
-Declare new double with scanner
-Declare new string with scanner 
-System.out.println(i+new integer)
-System.out.println(d+new double)
-System.out.println(s+new scanner)
+Import new scanner Console
+Create integer1 that's equal to next input
+Ask user to input a double
+Create double1 that's equal to next input
+Ask user to input a string
+Use scanner to make string1 equal to next Line
+Create string1 message that's equal to next input
+Make initial integer + new integer equal to integerSum
+Make initial double + new double equal to doubleSum
+Printf for integerSum and doubleSum that are on different lines and so they have only one decimal place. Also print original string (s) message with the string1
 */
-
 package com.company;
 import java.util.Scanner;
 
-
-
 public class Challengedatatype {
     public static void main(String[] args) {
-        Scanner Console = new Scanner(System.in);
+        Scanner Console = new Scanner(System.in);//Scanner that allows user to input information
 
-        int i = 4;
-        double d = 4.0;
-        String s = "Greenhill";
+        int i = 4; //given integer
+        double d = 4.0; // given double
+        String s = "Greenhill"; //given string
 
         System.out.println("Input integer: ");
         int integer1 = Console.nextInt();
         System.out.println("Input double: ");
         double double1 = Console.nextDouble();
-        System.out.println("Input string: ");
+        System.out.println("Input message: ");
+        Console.nextLine(); //do this so the string message equals the next line because after line 35 there is no next line
         String string1 = Console.nextLine();
 
-        System.out.println(i+integer1);
-        System.out.println(d+double1);
-        System.out.println(s+string1);
+        int integerSum = (i+integer1);
+        double doubleSum = (d+double1);
 
+        System.out.printf("%d \n%1.1f \n%s \n",integerSum,doubleSum, s + " " + string1); //will print each integer sum and double sum and string on different lines
     }
 }
+
