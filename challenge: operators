@@ -1,5 +1,5 @@
-//Psuedocode:
-// Declare scanner
+//Lian Hahn's Psuedocode:
+//Declare scanner
 //Input the cost of the meal before tax and tip (mealCost) with system.print and scanner
 //Input the percentage of cost of meal being added as tip (tipPercent) with system.print and scanner
 //Input the percentage of cost of meal being added as tax (taxpercent) with system.print and scanner
