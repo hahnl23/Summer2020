@@ -1,0 +1,67 @@
+/* Lian Hahn pseudocode
+Import scanner
+Ask user to input a word count
+Declare prompt integer "promptWord" that equals the next integer
+Make a for loop for integer s
+    - s is less than promptWord
+Declare new String string1
+do loop
+    - ask user to input word
+    - make string1 equal the next line
+    - close do loop
+While loop
+    - length of string1 is less than 2
+    - length of string1 is bigger than 10
+Declare new String word1 that equals word1(string1)
+Print the equivalent of word1
+Public static void String word1(String string1)
+Declare string even1
+Declare string odd1
+Make for loop for integer even2
+    - less than the length of string1
+    - must be in multiples of 2 starting from 0 to be even
+    - create char letter that equals the character at even2 on string1
+    - make even1 equal even1 plus char letter
+Make for loop for odd2
+    - less than the length of string1
+    - must be in multiples of 2 starting from 1 to be odd
+    - create char letter that equals the character at odd2 on string1
+    - make odd1 equal odd1 plus char letter
+Make return method for even1 and odd1 with a space in between
+ */
+
+
+package com.company;
+import java.util.Scanner;
+public class StringChallenge {
+    public static void main(String[] args) {
+        Scanner Console = new Scanner(System.in);
+        System.out.println("Input word count: Must be between 1 and 10"); //this gives a prompt for the string
+        int promptWord = Console.nextInt();
+
+        for(int s=0; s<promptWord; s++) {
+            String string1;
+            do{
+            System.out.println("Input your word");
+            string1 = Console.next();
+            } //must follow the previous word count
+
+        while(string1.length()<2 || string1.length()>10); //I used a while loop because if the string length is between 2 and 10, then the program will continue. if not, it will terminate.
+        String word1 = word1(string1);
+        System.out.println(word1);
+        }
+}
+public static String word1(String string1) {
+String even1 = "";
+String odd1 = "";
+for(int even2 = 0; even2< string1.length(); even2 += 2){
+    char letter = string1.charAt(even2); // this will locate at what character is it even by adding two and continuing starting from =0
+    even1 = even1 + letter; //will end up being "" plus the letter from the string
+}
+for (int odd2 = 1; odd2 < string1.length(); odd2 += 2){
+    char letter = string1.charAt(odd2); //this will locate what character the string1 is odd by adding two and continuing from 1.
+    odd1 = odd1 + letter; //"" plus the character at an index where the string is odd
+}
+return(even1 + " " + odd1); //will return back to the caller of the method listed above
+    }
+}
