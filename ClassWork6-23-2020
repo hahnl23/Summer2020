@@ -1,0 +1,58 @@
+/* Lian Hahn's pseudocode
+import scanner
+Create random rand that equals new Random()
+Create new integer Size that is equal to rand.nextInt(bound:5)+5
+Create an array int[] myArray that equals int[Size]
+For loop
+    - create integer i
+    - i equals zero
+    - i is less than Size
+    -i++
+    -myArray[i] is equal to rand.nextInt() with a bound of 100
+create integer index1
+Create integer index2
+Do loop
+    - make index2 equal to the random number at the next integer of Size
+    - make index1 equal to the random number at the next integer of Size
+While
+    - while the do loop is running, make index2 equal to index1
+Print the Arrays string with a toString(myArray) as a way to print it
+Create new method swap with int[], swap, index1 and index2
+Make integer temp that is equal to the swap of index1
+make the swap of index1 equal to the swap of index2
+make the swap of index 2 equal to temp
+Return method for swap
+ */
+package com.company;
+import java.util.*;
+public class Class623 {
+
+    public static void main(String[] args){
+        Random rand = new Random();
+        int Size = rand.nextInt(5)+5; //numbers between 5-15 use the range as a bound
+        int[] myArray = new int[Size]; //new array depending on the integer Size
+
+             for (int i = 0; i< Size; i++){
+                 myArray[i] = rand.nextInt(100); //numbers up to 100 use the range as a bound
+
+         }
+        int index1;//these are the indexes that will randomly be swapped
+        int index2;
+            do{
+                index1 = rand.nextInt(Size);//instead of saying exactly wht index we are swapping it is random with Size
+                index2 = rand.nextInt(Size);// will randomly swap indexes
+            }while (index2 == index1); //while loop so it is simultaneously printing the arrays while the do loop is running
+                System.out.println(Arrays.toString(myArray));
+                swap (myArray, index1, index2);
+                System.out.println(Arrays.toString(myArray));
+    }
+
+    public static int[] swap(int[] swap, int index1, int index2) {
+        int temp = swap[index1];
+        swap[index1] = swap[index2]; //this is where the index1 is swapped to equal index2 swapped
+        swap[index2] = temp; //this is where the index2 is swapped to equal temp
+
+        return swap; //will return method back to initial caller
+    }
+
+}
