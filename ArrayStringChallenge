@@ -1,0 +1,81 @@
+/* Lian Hahn's pseudocode
+import scanner
+Create scanner input
+make integer (int1)
+make string (string1)
+Create a do loop
+    - ask user how many words they are going to enter
+    - make int1 equal to the next integer input
+    - close do loop
+While
+    - int1 must be less than 1
+    - int1 must be greater than 10
+    - Make string array for inputWord that equals the string just inputed int1
+    - Make string array for outputWord that equals the string just inputed int1
+For loop
+    - integer i
+    - i is equal to zero
+    - i is less than int1
+Do loop
+    -Ask user to enter word
+    -make string1 equal to the next input
+    - this next input is i
+While
+    - the length of string1 is less than 2 and the length of string1 is bigger than 10000
+    - make the outputWord[i] equal to the string Console(inputWord[i])
+For loop
+    - make integer i equal to zero
+    - i is less than int1
+    - print the outputWord[i]
+Create new public static string Console (String string2)
+Create String even1 that is equal to ""
+Create String odd1 that is equal to ""
+For loop
+    - create integer even
+    - make it equal to zero
+    - make it less than the length of string2 and has to be multiples of two from zero
+    - create char letter that is equal to the character at string2 when it is odd
+    - make even1 equal even1 plus that letter
+For loop
+    - create integer odd
+    - make it equal to one
+    - make it less than the length of string2 and has to be multiples of two from one
+    - create char letter that is equal to the character at string2 when it is odd
+    - make odd1 equal odd1 plus that letter
+Return method for even1 and odd1
+ */
+package com.company;
+import java.util.Scanner;
+public class ArrayStringChallenge {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);//allows user to input their own strings or integers
+        int int1;
+        String string1;
+        do {
+            System.out.println("How many words would you like to enter?");
+            int1 = input.nextInt(); //I did nextInt() so it will connect with while loop and make sure that the integer stays in the boundaries
+        } while (int1 < 1 || int1 > 10);//program will terminate if the integer is not between 1 and 10
+        String[] inputWord = new String[int1]; //array
+        String[] outputWord = new String[int1]; //array
+        for (int i = 0; i < int1; i++) {
+            do {
+                System.out.println("Enter your word");
+                string1 = input.next();
+                inputWord[i] = string1;
+            } while (string1.length() < 2 || string1.length() > 10000);//program will terminate if the string length is not between 2 and 100000
+            outputWord[i] = Console(inputWord[i]); }
+        for (int i = 0; i < int1; i++) {
+            System.out.println(outputWord[i]); }
+    }
+    public static String Console (String string2) {
+        String even1 = "";
+        String odd1 = "";
+        for (int even = 0; even < string2.length(); even += 2) { //must be in multiples of two STARTING FROM 0 to make sure that it is even
+            char letter = string2.charAt(even); //will locate where in the inputed string2 is the character even
+            even1 = even1 + letter;
+        }
+        for (int odd = 1; odd < string2.length(); odd += 2) { //must be in multiples of two STARTING FROM 1 to make sure that it is odd
+            char letter = string2.charAt(odd);// will locate where in the inputed string2 is the haravter odd
+            odd1 = odd1 + letter;
+        }
+        return even1 + " " + odd1; //will return the method back to the caller of the method listed above
