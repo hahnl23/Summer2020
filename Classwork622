@@ -1,0 +1,59 @@
+/* Lian Hahn's Pseudocode:
+Import scanner
+Declare three integers (temp, total, and average) that equal zero
+Declare random (randy) that is a new random
+Declare integer index that equals zero
+Do loop
+    - Ask user how many days they want to know the high temp
+    - temp equals console.nextInt();
+While
+    - temp must be greater than two and less than 100
+the integer array myArray is equal to the integer array temp
+For loop
+    - index is zero
+    - index is less than the length of myArray
+    -the index of myArray is the random integer bound: by 85 and then everything plus 25
+    - Print the day and the index plus one: and the index of myArray with degrees at the end
+    - the total is the total plus the index of myArray
+Make the average equal to the total divided by the temp
+Print the average temperature of all the days
+Declare integer counter that equals zero
+Make for loop
+    - index is zero
+    - index is less than the length of myArray
+    - if statement (the index of myArray is greater than the average), then counter++
+Print how many days are above average using counter
+ */
+
+package com.company;
+import java.util.*;
+public class Class622 {
+    public static void main(String[] args) {
+        int temp = 0;
+        int total = 0;
+        int average = 0; //for later calculating the average using the two above integers
+        Random randy = new Random(); //creates a random number that we can control
+        Scanner console = new Scanner(System.in);
+        int index = 0;
+        do {
+            System.out.println("How many days do you want to know the high temp?");
+            temp = console.nextInt();
+
+        } while (temp > 2 || temp < 100); //sets the limit and program will not continue if the number is not within 2-100
+        int[] myArray = new int[temp]; //using string array
+        for (index = 0; index < myArray.length; index++) {
+            myArray[index] = (randy.nextInt(85) + 25); //myArray is the number of degrees in the temp and it uses the random number as well as the next integer
+            System.out.println("Day" + (index + 1) + ": " + myArray[index] + " degrees");
+            total = total + myArray[index];
+        }
+        average = total / temp;
+        System.out.println("The average temperature of all the days are: " + average);
+        int counter = 0;
+        for (index = 0; index < myArray.length; index++) {
+            if (myArray[index] > average) { //need to make sure that myArray[index] is greater than the average or else counter won't advance and increase
+                counter++;
+            }
+        }
+        System.out.println(counter + " days are above average.");
+    }
+}
